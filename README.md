@@ -84,3 +84,17 @@ The backend system is designed around several core entities. Below is an overvie
 | **Review**  | `id`, `user_id`, `property_id`, `rating`, `comment`   | A review is posted by a user for a specific property.                         |
 | **Payment** | `id`, `booking_id`, `amount`, `status`, `payment_method` | A payment is tied to a booking.                                               |
 
+---
+
+## 🧩 Feature Breakdown
+
+| Feature               | Description                                                                                                   |
+|------------------------|---------------------------------------------------------------------------------------------------------------|
+| **User Management**    | Enables users to register, log in using JWT, and manage their profile. Includes host identification and account settings. |
+| **Property Management**| Hosts can create, update, and manage property listings including details like title, price, location, and availability. |
+| **Booking System**     | Allows users to browse available properties, make reservations, view booking history, and manage check-in/check-out. |
+| **Payment Processing** | Securely handles payments for bookings via integrated payment gateways. Payment records are linked to bookings. |
+| **Review System**      | Users can leave reviews and rate properties after a completed booking. Reviews help maintain trust in the platform. |
+| **API Support**        | RESTful and GraphQL APIs provide flexible access to data for frontend clients or third-party integrations.     |
+| **Asynchronous Tasks** | Background tasks (e.g., email notifications, payment confirmations) are handled using Celery and Redis.        |
+| **Data Optimization**  | Utilizes caching and indexing to speed up frequent queries and reduce load on the database.                   |
