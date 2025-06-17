@@ -52,4 +52,21 @@ This project involves multiple roles that contribute to building and maintaining
 | **DevOps Engineer**        | Sets up Docker environments, manages CI/CD pipelines, handles deployment and monitoring of the application. |
 | **QA Engineer**            | Writes test cases, performs manual and automated testing to ensure the backend meets quality standards. |
 
+---
+
+## 🧱 Technology Stack
+
+| Technology       | Purpose                                                                                  |
+|------------------|------------------------------------------------------------------------------------------|
+| **Python**       | The primary programming language used for building the backend logic.                    |
+| **Django**       | High-level web framework for handling routing, models, authentication, and admin.       |
+| **Django REST Framework** | Simplifies building RESTful APIs with features like serializers and viewsets.         |
+| **GraphQL**      | Enables flexible and efficient client-defined queries and mutations.                     |
+| **PostgreSQL**   | Relational database used to store structured data like users, bookings, and listings.    |
+| **JWT (SimpleJWT)** | Provides stateless, token-based authentication for securing API access.                |
+| **Celery**       | Manages asynchronous tasks such as sending emails or processing payments.                |
+| **Redis**        | Acts as a message broker for Celery and handles caching for improved performance.        |
+| **Docker**       | Containers to isolate services and ensure consistent environments across machines.       |
+| **CI/CD Pipelines** | Automates testing, building, and deployment processes for continuous delivery.         |
+
 
