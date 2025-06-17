@@ -115,3 +115,23 @@ Security is a critical aspect of any application dealing with sensitive user inf
 | **CSRF Protection (where needed)** | For any forms or web-based endpoints, CSRF tokens will be used.                                     | Prevents cross-site request forgery attacks on user sessions.                  |
 | **Secure Payment Handling** | Uses third-party gateways to handle card and transaction processing with webhooks and tokenization. | Ensures PCI compliance and prevents exposure of sensitive financial data.      |
 
+---
+
+## 🚀 CI/CD Pipeline
+
+**CI/CD (Continuous Integration and Continuous Deployment)** pipelines automate the process of testing, building, and deploying code changes. They help ensure that every code update is validated through tests and automatically deployed to staging or production environments with minimal manual intervention.
+
+This project will utilize CI/CD to:
+- Automatically run tests on every push or pull request.
+- Build and package the application using Docker.
+- Deploy changes to staging or production after successful test runs.
+- Catch issues early and maintain code quality throughout development.
+
+| Tool            | Purpose                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **GitHub Actions** | Automates testing, linting, and deployment steps on each code push.    |
+| **Docker**         | Ensures consistent environments across development, testing, and production. |
+| **Railway / Heroku / Render** | (Optional) Can be used for deploying the app in staging/production.       |
+| **pytest / Django Test Runner** | For running automated tests during the CI phase.                        |
+
+
