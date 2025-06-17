@@ -98,3 +98,20 @@ The backend system is designed around several core entities. Below is an overvie
 | **API Support**        | RESTful and GraphQL APIs provide flexible access to data for frontend clients or third-party integrations.     |
 | **Asynchronous Tasks** | Background tasks (e.g., email notifications, payment confirmations) are handled using Celery and Redis.        |
 | **Data Optimization**  | Utilizes caching and indexing to speed up frequent queries and reduce load on the database.                   |
+
+---
+
+## 🔐 API Security
+
+Security is a critical aspect of any application dealing with sensitive user information, financial data, and multi-role access. The following measures will be implemented to ensure the backend APIs remain secure and trustworthy.
+
+| Security Measure       | Description                                                                                          | Why It Matters                                                                 |
+|------------------------|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Authentication (JWT)** | Uses JSON Web Tokens to securely verify users before granting access to protected routes.            | Prevents unauthorized access and ensures user identity is verifiable.          |
+| **Authorization**       | Role-based access control will ensure only hosts can manage properties and admins can manage all data. | Prevents privilege escalation and protects sensitive resources.                |
+| **Rate Limiting**       | Implements throttling to limit how often clients can call APIs.                                      | Mitigates abuse (e.g., brute-force attacks, scraping, denial of service).      |
+| **Input Validation**    | Ensures all user input is sanitized and validated on both client and server side.                    | Prevents injection attacks (SQL, XSS) and corrupt data entries.                |
+| **HTTPS Enforcement**   | Enforces encrypted communication between client and server.                                          | Protects data in transit from man-in-the-middle attacks.                       |
+| **CSRF Protection (where needed)** | For any forms or web-based endpoints, CSRF tokens will be used.                                     | Prevents cross-site request forgery attacks on user sessions.                  |
+| **Secure Payment Handling** | Uses third-party gateways to handle card and transaction processing with webhooks and tokenization. | Ensures PCI compliance and prevents exposure of sensitive financial data.      |
+
