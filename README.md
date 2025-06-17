@@ -70,3 +70,17 @@ This project involves multiple roles that contribute to building and maintaining
 | **CI/CD Pipelines** | Automates testing, building, and deployment processes for continuous delivery.         |
 
 
+---
+
+## 🗃️ Database Design
+
+The backend system is designed around several core entities. Below is an overview of each entity, key fields, and relationships.
+
+| Entity      | Key Fields                                             | Relationships                                                                 |
+|-------------|--------------------------------------------------------|--------------------------------------------------------------------------------|
+| **User**    | `id`, `name`, `email`, `password`, `is_host`          | A user can list multiple properties and make multiple bookings.                |
+| **Property**| `id`, `title`, `description`, `location`, `price`     | A property belongs to one host (User) and can have multiple bookings/reviews. |
+| **Booking** | `id`, `user_id`, `property_id`, `check_in`, `check_out` | A booking is made by a user for a specific property.                          |
+| **Review**  | `id`, `user_id`, `property_id`, `rating`, `comment`   | A review is posted by a user for a specific property.                         |
+| **Payment** | `id`, `booking_id`, `amount`, `status`, `payment_method` | A payment is tied to a booking.                                               |
+
