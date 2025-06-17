@@ -39,3 +39,17 @@ Build a robust, scalable backend system that supports core Airbnb functionalitie
 
 Supports both REST (via DRF) and GraphQL endpoints.
 
+---
+
+## 👥 Team Roles
+
+This project involves multiple roles that contribute to building and maintaining the backend system:
+
+| Role                | Responsibility                                                                 |
+|---------------------|----------------------------------------------------------------------------------|
+| **Backend Developer**     | Builds the API endpoints, integrates business logic, ensures authentication and security mechanisms are properly implemented. |
+| **Database Administrator (DBA)** | Designs the database schema, manages indexing and performance optimization, and ensures data integrity. |
+| **DevOps Engineer**        | Sets up Docker environments, manages CI/CD pipelines, handles deployment and monitoring of the application. |
+| **QA Engineer**            | Writes test cases, performs manual and automated testing to ensure the backend meets quality standards. |
+
+
